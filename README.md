@@ -125,6 +125,48 @@ r.contains(r2);
 r.overlaps(r2);
 
 ```
+Отображение текста
+```java
+Label label;
+
+....
+
+public void create() {
+
+	...
+	
+	//Стандартный шрифт
+	BitmapFont font = new BitmapFont();
+	
+	//Надпись
+	String text = "TEXT";
+	
+	//стиль - шрифт и цвет
+	LabelStyle style = new LabelStyle(font, Color.RED);
+	
+	//создание
+	label = new Label(text,style);
+	
+	//размер шрифта
+	label.setFontScale(2);
+	
+	//положение на экране
+	label.setPosition(200,100);
+	
+	...
+	
+}
+
+public void render() {
+	
+	...
+	
+	//отрисовываем надпись. 1 - не прозрачно, 0 - полностью прозрачно
+	label.draw(batch,1);
+	
+	...
+}
+```
 
 
 
