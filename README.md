@@ -109,7 +109,24 @@ public void create() {
   sprite = new Sprite(new Texture(...));
 }
 ```
+У этого класса уже есть встроенные координаты и метод отрисовки:
+```java
+//получить координаты
+sprite.getX();
+sprite.getY();
 
+//выставить координаты
+sprite.setX(...);
+sprite.setY(...);
+
+//сместить координаты на какое-то значение
+sprite.translateX(...);
+sprite.translateY(...);
+
+//отрисовка
+sprite.draw(batch);
+```
+Также, у этого класса есть встроенные методы для определения пересечения с другими спрайтами. Для этого нужно получить из спрайтов объекты Rectangle.
 ```java
 //получение прямоугольной области из спрайта
 Rectangle r = sprite.getBoundingRectangle();
@@ -125,6 +142,10 @@ r.contains(r2);
 r.overlaps(r2);
 
 ```
+
+
+
+
 Отображение текста
 ```java
 Label label;
